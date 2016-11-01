@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="white">
+    <div class="container">
+        <h2>@ViewBag.Message</h2>
+
+        <address>
+            135 N University Ave<br />
+            Provo, Utah<br />
+            <abbr title="Phone">P:</abbr>
+            (801) 818-2263
+        </address>
+
+        <address>
+            <strong>Booking:</strong>   <a href="mailto:booking@velourlive.com">booking@velourlive.com</a><br />
+            <strong>Other:</strong> <a href="mailto:kaneischa@velourlive.com">kaneischa@velourlive.com</a>
+        </address>
+
+        <div class="col-sm-8">
+            @using (Html.BeginForm("Conact", "Home", FormMethod.Post))
+            {
+                <h3 class="form-signin-heading">Write us an Email</h3>
+                <label for="inputName" class="sr-only">User Name</label>
+                @Html.TextBox("UserName", "", new { type = "name", id = "inputName", @class = "form-control", placeholder = "Name", required = true })
+                <label for="inputEmail" class="sr-only">Email address</label>
+                @Html.TextBox("Email", "", new { type = "Email", id = "inputEmail", @class = "form-control", placeholder = "Email", required = true })
+                @Html.TextArea("Subject", "", new { type = "Subject", id = "inputSubject", @class = "form-control", required = true })
+                <button class="btn btn-lg btn-primary" type="submit">Send</button>
+            }
+        </div>
+    </div>
+</div>

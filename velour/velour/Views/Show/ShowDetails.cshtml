@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ShowDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="white">
+    <div class="container">
+
+        <ul class="breadcrumb">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Shows","Shows","Show")</li>
+            <li class="active">@ViewBag.Artist</li>
+        </ul>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="AlbumCover" src="~/VelourWebContent/@ViewBag.Image" alt="Band Image" />
+            </div>
+
+            <div class="col-sm-6">
+                <h1><strong class="artist">@ViewBag.Artist</strong> <em class="genre">(@ViewBag.Genre)</em></h1>
+                <h2>@ViewBag.StartTime</h2>
+                <p><a href="@ViewBag.Website">@ViewBag.Website</a></p>
+                <p>All tickets are sold on a first come first serve basis. The doors will open 1 hour before the show starts. All tickets are general admission and there is no assigned seating.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12">
+                @using (Html.BeginForm("Comment", "Show", FormMethod.Post))
+                {
+                    <h3>Comments</h3>
+                    @Html.TextArea("Comment", "", new { type = "Comment", id = "SubmitComment", @class = "form-control" });
+                    <button class="btn btn-lg btn-primary" type="submit">Comment</button>
+                }
+            </div>
+        </div>
+        
+    </div>
+</div>
+S
+

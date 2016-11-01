@@ -1,0 +1,92 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+    background-color: black;
+}
+.black {margin: 0; height: 100%; overflow: hidden}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.white{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+}
+iframe{
+    width: 100%
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 750px;
+}*/
+
+.jumbotron{
+    position: relative;
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    width: 100%;
+}
+
+.jumbotron .heroimg {
+    position: fixed;
+    left: 50%;
+    width: 100%;
+    z-index: -1;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover; 
+}
+
+.jumbotron .logo{
+    position: relative;
+    width: 50%;
+    z-index: 2;
+}
+
+.herotxt{
+    color: white;
+}
+
+.spacer{
+    height: 170px;
+}
+
+.artist{
+    color: black;
+}
+.genre{
+    font-size: 18pt;
+}
+.AlbumCover{
+    width: 100%;
+}
+.btn{
+    margin-top: 10px;
+}
+
+#inputSubject {
+    height: 200px;
+}
